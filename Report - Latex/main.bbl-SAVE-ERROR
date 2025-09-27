@@ -16,5 +16,170 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{smap}{dataset}{}
+      \name{author}{7}{}{%
+        {{hash=86c876695b01ebd1f40086f0e2bc1a4e}{%
+           family={O'Neill},
+           familyi={O\bibinitperiod},
+           given={P.\bibnamedelimi E.},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=791270c4ea61117da070ceb2019321c3}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=46455e5c1fcddce31ab81bf01e928d72}{%
+           family={Njoku},
+           familyi={N\bibinitperiod},
+           given={E.\bibnamedelimi G.},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=e118d5f4aec9ce8c0904b6fe8e69188f}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=73c287721f45298e38a6a200054ae6e4}{%
+           family={Bindlish},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=293c16a09fdce5df9fd9e3104975bdcd}{%
+           family={Chaubell},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e726f8119bc22393062bfb7ff1e4000f}{%
+           family={Colliander},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boulder, Colorado USA}%
+      }
+      \strng{namehash}{4826d4ae87d541ba39ff35d6582b89e0}
+      \strng{fullhash}{9db029192f3895ec447388387d64d9cd}
+      \strng{bibnamehash}{4826d4ae87d541ba39ff35d6582b89e0}
+      \strng{authorbibnamehash}{4826d4ae87d541ba39ff35d6582b89e0}
+      \strng{authornamehash}{4826d4ae87d541ba39ff35d6582b89e0}
+      \strng{authorfullhash}{9db029192f3895ec447388387d64d9cd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{NASA National Snow and Ice Data Center Distributed Active Archive Center}
+      \field{note}{Subset: Baton Rouge, Louisiana, 2022--2024. Accessed 2025-09-27}
+      \field{title}{SMAP Enhanced L3 Radiometer Global and Polar Grid Daily 9 km EASE-Grid Soil Moisture, Version 6}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.5067/M20OXIZHY3RJ
+      \endverb
+      \verb{urlraw}
+      \verb https://nsidc.org/data/SPL3SMP_E
+      \endverb
+      \verb{url}
+      \verb https://nsidc.org/data/SPL3SMP_E
+      \endverb
+    \endentry
+    \entry{imergdp}{dataset}{}
+      \name{author}{4}{}{%
+        {{hash=e6cbe1df75f5dea5f3e7120ddfd3296e}{%
+           family={Huffman},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ee86fd3dfca57e26cc2c0346a389b8b8}{%
+           family={Bolvin},
+           familyi={B\bibinitperiod},
+           given={D.\bibnamedelimi T.},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=b878c7035f1c1f906675736c4e10bf48}{%
+           family={Stocker},
+           familyi={S\bibinitperiod},
+           given={E.\bibnamedelimi F.},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=4116b01dc4781075ba427d38228822f8}{%
+           family={Nelkin},
+           familyi={N\bibinitperiod},
+           given={E.\bibnamedelimi J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Greenbelt, Maryland, USA}%
+      }
+      \strng{namehash}{8411975a281bd20a32567e912d93ba52}
+      \strng{fullhash}{7811c77c8a4f987d8e71d2c4963ca00e}
+      \strng{bibnamehash}{8411975a281bd20a32567e912d93ba52}
+      \strng{authorbibnamehash}{8411975a281bd20a32567e912d93ba52}
+      \strng{authornamehash}{8411975a281bd20a32567e912d93ba52}
+      \strng{authorfullhash}{7811c77c8a4f987d8e71d2c4963ca00e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{NASA Goddard Earth Sciences Data and Information Services Center (GES DISC)}
+      \field{note}{Subset: Baton Rouge, Louisiana, 2022--2024. Accessed 2025-09-27}
+      \field{title}{GPM IMERG Final Precipitation L3 1 day 0.1 degree × 0.1 degree V07 (GPM\_3IMERGDF)}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.5067/GPM/IMERGDF/DAY/07
+      \endverb
+      \verb{urlraw}
+      \verb https://data.nasa.gov/dataset/gpm-imerg-final-precipitation-l3-1-day-0-1-degree-x-0-1-degree-v07-gpm-3imergdf-at-ges-dis-13ed8
+      \endverb
+      \verb{url}
+      \verb https://data.nasa.gov/dataset/gpm-imerg-final-precipitation-l3-1-day-0-1-degree-x-0-1-degree-v07-gpm-3imergdf-at-ges-dis-13ed8
+      \endverb
+    \endentry
+    \entry{Fahs2025}{report}{}
+      \name{author}{5}{}{%
+        {{hash=8040414b49aa974b31cadd04f8942bcf}{%
+           family={Boujoudar},
+           familyi={B\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7fc7ba2af0cb3a4558c9d265e17536e9}{%
+           family={Abbar},
+           familyi={A\bibinitperiod},
+           given={Bouamama},
+           giveni={B\bibinitperiod}}}%
+        {{hash=91cbd4874716dcffbc1a88a8982e2e2d}{%
+           family={Azaroual},
+           familyi={A\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=986e8fd5837357ec4aea4d364aaa1fe0}{%
+           family={Fahs},
+           familyi={F\bibinitperiod},
+           given={Marwan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=af5f76f390b01b1be892b11ee57bfeff}{%
+           family={Abbani},
+           familyi={A\bibinitperiod},
+           given={Ghina},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Copernicus Meetings}%
+      }
+      \strng{namehash}{88ca2c08d7c3b3db7141b39ee6f88fd1}
+      \strng{fullhash}{be3f7ff26576633f83980717a1c20420}
+      \strng{bibnamehash}{88ca2c08d7c3b3db7141b39ee6f88fd1}
+      \strng{authorbibnamehash}{88ca2c08d7c3b3db7141b39ee6f88fd1}
+      \strng{authornamehash}{88ca2c08d7c3b3db7141b39ee6f88fd1}
+      \strng{authorfullhash}{be3f7ff26576633f83980717a1c20420}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Modeling Water, Heat, and Nitrate Dynamics in the VadoseZone: A Case Study of the Beauce Aquifer (Orleans, France)}
+      \field{type}{techreport}
+      \field{year}{2025}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

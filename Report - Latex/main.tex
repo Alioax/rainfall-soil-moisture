@@ -1,6 +1,5 @@
 \documentclass[twocolumn]{article}
 
-
 \usepackage{graphicx}
 \graphicspath{{../figs/}}
 \usepackage[a4paper, margin=1.5cm, bottom=2.5cm]{geometry}
@@ -11,6 +10,13 @@
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{stfloats}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\definecolor{UIUC_orange}{HTML}{FF5F05}
+\usepackage[colorlinks=true,
+            linkcolor=UIUC_orange,
+            urlcolor=UIUC_orange,
+            citecolor=UIUC_orange]{hyperref}
 \usepackage[
   backend=biber,
   style=numeric,          % numbered refs
@@ -29,30 +35,34 @@
   
   \setlength{\columnsep}{0.5cm}
   
-  
-
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {0.8ex plus 0.5ex minus 0.2ex}%
+  {0.5ex}%
+  {\normalfont\large\bfseries}}
+\makeatother
 
 \makeatletter
 \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
 \begin{flushleft}
   \Large\textbf{\@title}
-  
+
   \vspace{0.2cm}
-  
+
   \normalsize\@author \hfill \normalsize\@date
-  
-  \vspace{0.25cm}
-  \hrule
-  
-  \vspace{0.25cm}
-\end{flushleft}\egroup
-}
+
+  \vspace{0.25cm}\hrule\vspace{0.25cm}
+\end{flushleft}
+\egroup}
 \makeatother
 
 
-
 \title{Rainfall-Soil Moisture Event Responses near Baton Rouge, Louisiana}
-\author{Ali Haghighi, Afshin Ashrafzadeh}
+\author{%
+  % Ali Haghighi\thanks{University of Tehran, \href{mailto:ahaghighi@ut.ac.ir}{ahaghighi@ut.ac.ir}}%
+  % Afshin Ashrafzadeh\thanks{University of Tehran, \href{mailto:a.ashrafzadeh@ut.ac.ir}{a.ashrafzadeh@ut.ac.ir}}%
+  Ali Haghighi \footnotesize{(ahaghighi@ut.ac.ir)}\normalsize, Afshin Ashrafzadeh
+}
 \date{\today}
 
 
@@ -64,7 +74,9 @@
   \end{@twocolumnfalse}
 ]
 
-
+% \makeatletter
+% \@thanks
+% \makeatother
 
 \section*{Introduction}
 
@@ -72,10 +84,14 @@ Rainfall controls soil moisture variability and drives hydrological processes fr
 
 Our results provide insight into how antecedent wetness and event precipitation shape soil moisture responses across seasons. Beyond immediate hydrological interpretation, this framework offers a basis for future extensions, including nitrate leaching and surface-subsurface contamination analysis, once nutrient datasets are integrated.
 
+\textbf{Resources: }
+Codes and processed data (spatially and temporally subsampled; easy-to-use CSV) are available on \href{https://github.com/Alioax/rainfall-soil-moisture/}{GitHub repository}. 
+My personal website and other projects can be found at \href{https://ciarel.com}{Ciarel.com}.
+
 
 \section*{Study Area and Data}
 
-The analysis domain is a 25~$\times$~25~km box surrounding Baton Rouge, Louisiana (SW: 30.34000,~-91.28000; NE: 30.56000,~-91.02000), as shown in Fig.~\ref{fig:map}. This bounding box was chosen to capture regional hydroclimatic variability while maintaining a tractable spatial scale for event-based soil moisture analysis. Both precipitation and soil moisture datasets were subsetted spatially to this domain and temporally to the period 2022--2024.
+The analysis domain is a 25~$\times$~25~km box surrounding Baton Rouge, Louisiana (SW: 30.34,~-91.28; NE: 30.56,~-91.02), as shown in Fig.~\ref{fig:map}. This bounding box was chosen to capture regional hydroclimatic variability while maintaining a tractable spatial scale for event-based soil moisture analysis. Both precipitation and soil moisture datasets were subsetted spatially to this domain and temporally to the period 2022--2024.
 
 \begin{figure}[!h]
   \centering
@@ -121,7 +137,7 @@ Monthly precipitation and domain‐mean soil moisture (Fig.~\ref{fig:monthly_pre
 \begin{figure}[!h]
   \centering
   \includegraphics[width=1\columnwidth]{monthly_precip_sm}
-  \caption{Monthly precipitation totals and averaged soil moisture from 2022–2024.}
+  \caption{Monthly precipitation totals and averaged soil moisture from 2022-2024.}
   \label{fig:monthly_precip_sm}
 \end{figure}
 
@@ -137,7 +153,7 @@ Event characteristics are shown in Fig.~\ref{fig:rain_events}. The median event 
 
 \paragraph{Soil moisture responses.}
 
-For each event, the soil moisture increment ($\Delta \theta$) was calculated. Fig.~\ref{fig:sample_events} illustrates sample events; smaller storms were sometimes missed by detection rules. Across all events (Fig.~\ref{fig:dt_events}, top), $\Delta \theta$ had a median of ~6\% and a maximum near 18\%. The left panel shows a clear saturation boundary: high antecedent moisture limits responses, while drier soils allow larger increases. Winter and spring cluster near saturation, consistent with Fig.~\ref{fig:monthly_precip_sm}, whereas summer–autumn span drier antecedent states with responses from 0–18\%. The right panel relates $\Delta \theta$ to precipitation: most events (0–50~mm) produced variable responses, indicating rainfall depth alone does not constrain soil moisture change.
+For each event, the soil moisture increment ($\Delta \theta$) was calculated. Fig.~\ref{fig:sample_events} illustrates sample events; smaller storms were sometimes missed by detection rules. Across all events (Fig.~\ref{fig:dt_events}, top), $\Delta \theta$ had a median of ~6\% and a maximum near 18\%. The left panel shows a clear saturation boundary: high antecedent moisture limits responses, while drier soils allow larger increases. Winter and spring cluster near saturation, consistent with Fig.~\ref{fig:monthly_precip_sm}, whereas summer-autumn span drier antecedent states with responses from 0-18\%. The right panel relates $\Delta \theta$ to precipitation: most events (0-50~mm) produced variable responses, indicating rainfall depth alone does not constrain soil moisture change.
 
 \begin{figure}[!h]
     \centering
@@ -156,7 +172,7 @@ For each event, the soil moisture increment ($\Delta \theta$) was calculated. Fi
 
 \section*{Future Research}
 
-Future research could potentially extend this event-based framework by coupling - moisture responses with a fully integrated water–heat–nitrate modeling approach, similar to recent work by Fahs and colleagues \cite{Fahs2025}. Such coupling would allow assessment of how storm-driven infiltration dynamics influence not only moisture but also temperature effects and nitrate mobilization in the vadose zone, thereby linking observed $\Delta \theta$ signatures to broader water-quality implications under seasonal variability.
+Future research could potentially extend this event-based framework by coupling - moisture responses with a fully integrated water-heat-nitrate modeling approach, similar to recent work by \textcite{Fahs2025}. Such coupling would allow assessment of how storm-driven infiltration dynamics influence not only moisture but also temperature effects and nitrate mobilization in the vadose zone, thereby linking observed $\Delta \theta$ signatures to broader water-quality implications under seasonal variability.
 
 \printbibliography
 
