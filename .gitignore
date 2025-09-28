@@ -1,3 +1,7 @@
 /data/processed/IMERGDP/Granules/
 /data/raw/
 /docs/
+Report/*
+!Report/Report - Rainfall Soil-Moisture Response.tex
+!Report/Report - Rainfall Soil-Moisture Response.pdf
+!Report/references.bib
