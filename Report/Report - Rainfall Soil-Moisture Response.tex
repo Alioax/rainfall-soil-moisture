@@ -105,21 +105,21 @@ Rainfall governs soil moisture variability and drives hydrological processes fro
 Codes and processed data (spatially and temporally subsampled; easy-to-use CSV) are available on \href{https://github.com/Alioax/rainfall-soil-moisture/}{GitHub repository}. 
 My personal website and other projects can be found at \href{https://ciarel.com}{Ciarel.com}.
 
+\begin{figure}[!b] % htbp
+  \centering
+  \includegraphics[width=0.95\columnwidth]{map}
+  \caption{Study area near Baton Rouge, Louisiana. The analysis domain (25 $\times$ 25 km box) is outlined and overlain on regional context.}
+  \label{fig:map}
+\end{figure}
 
 \section{Study Area and Data}
 
 The analysis domain is a 25~$\times$~25~km box surrounding Baton Rouge, Louisiana (SW: 30.34,~-91.28; NE: 30.56,~-91.02), as shown in Fig.~\ref{fig:map}. This bounding box was chosen to capture regional hydroclimatic variability while maintaining a tractable spatial scale for event-based soil moisture analysis. Both precipitation and soil moisture datasets were subsetted spatially to this domain and temporally to the period 2022--2024.
 
-\begin{figure}[!h] % htbp
-  \centering
-  \includegraphics[width=0.85\columnwidth]{map}
-  \caption{Study area near Baton Rouge, Louisiana. The analysis domain (25 $\times$ 25 km box) is outlined and overlain on regional context.}
-  \label{fig:map}
-\end{figure}
-
 Soil moisture conditions were obtained from the NASA Soil Moisture Active Passive (SMAP) mission, using the Enhanced Level-3 Radiometer Global Daily product (9~km resolution), which provides surface soil moisture retrievals representative of the top $\sim$5~cm of soil \cite{smap}. Precipitation data were obtained from the Global Precipitation Measurement (GPM) mission's Integrated Multi-satellite Retrievals (IMERG) Final Run product, available at 0.1$^{\circ}$ spatial and daily temporal resolution \cite{imergdp}.
 
 Together, SMAP and IMERG provide harmonized, global-scale, open-access satellite observations suitable for characterizing - moisture interactions in regions such as Baton Rouge, where high-frequency precipitation events and strong seasonal cycles affect vadose-zone hydrology.
+
 
 \section{Methods}
 
