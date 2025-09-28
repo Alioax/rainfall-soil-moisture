@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{article}
+\documentclass[8pt, twocolumn]{extarticle}
 
 \usepackage{graphicx}
 \graphicspath{{../figs/}}
@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{stfloats}
 \usepackage{titlesec}
+\usepackage{setspace}
 \usepackage{xcolor}
 \definecolor{UIUC_orange}{HTML}{FF5F05}
 \usepackage[colorlinks=true,
@@ -35,19 +36,19 @@
   
   \setlength{\columnsep}{0.5cm}
   
-\makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
-  {0.8ex plus 0.5ex minus 0.2ex}%
-  {0.5ex}%
-  {\normalfont\large\bfseries}}
-\makeatother
+% \makeatletter
+% \renewcommand\section{\@startsection{section}{1}{0pt}%
+%   {0.8ex plus 0.5ex minus 0.2ex}%
+%   {0.5ex}%
+%   {\normalfont\Large\bfseries}}
+% \makeatother
 
 \makeatletter
 \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
 \begin{flushleft}
-  \Large\textbf{\@title}
+  \huge\textbf{\@title}
 
-  \vspace{0.2cm}
+  \vspace{0.25cm}
 
   \normalsize\@author \hfill \normalsize\@date
 
@@ -57,14 +58,16 @@
 \makeatother
 
 
-\title{Rainfall-Soil Moisture Event Responses near Baton Rouge, Louisiana}
+\title{Rassinfall-Soil Moisture Event Responses near Baton Rouge, Louisiana}
 \author{%
   % Ali Haghighi\thanks{University of Tehran, \href{mailto:ahaghighi@ut.ac.ir}{ahaghighi@ut.ac.ir}}%
   % Afshin Ashrafzadeh\thanks{University of Tehran, \href{mailto:a.ashrafzadeh@ut.ac.ir}{a.ashrafzadeh@ut.ac.ir}}%
-  Ali Haghighi \footnotesize{(ahaghighi@ut.ac.ir)}\normalsize, Afshin Ashrafzadeh
+  \large Ali Haghighi \normalsize{(ahaghighi@ut.ac.ir)}\large, Afshin Ashrafzadeh
 }
-\date{\today}
+\date{\large \today}
 
+
+\renewcommand{\baselinestretch}{1.2} % 1.2x line spacing
 
 \begin{document}
 
@@ -78,7 +81,7 @@
 % \@thanks
 % \makeatother
 
-\section*{Introduction}
+\section{Introduction}
 
 Rainfall controls soil moisture variability and drives hydrological processes from infiltration to contaminant transport. This study investigates event-scale rainfall-soil moisture interactions near Baton Rouge, Louisiana, during 2022-2024. We detect and analyze individual rainfall events, quantify associated soil moisture responses, and assess seasonal patterns in their magnitude and variability. The focus is on the change in soil moisture ($\Delta \theta$) as an indicator of infiltration dynamics.
 
@@ -89,11 +92,11 @@ Codes and processed data (spatially and temporally subsampled; easy-to-use CSV) 
 My personal website and other projects can be found at \href{https://ciarel.com}{Ciarel.com}.
 
 
-\section*{Study Area and Data}
+\section{Study Area and Data}
 
 The analysis domain is a 25~$\times$~25~km box surrounding Baton Rouge, Louisiana (SW: 30.34,~-91.28; NE: 30.56,~-91.02), as shown in Fig.~\ref{fig:map}. This bounding box was chosen to capture regional hydroclimatic variability while maintaining a tractable spatial scale for event-based soil moisture analysis. Both precipitation and soil moisture datasets were subsetted spatially to this domain and temporally to the period 2022--2024.
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.95\columnwidth]{map}
   \caption{Study area near Baton Rouge, Louisiana. The analysis domain (25 $\times$ 25 km box) is outlined and overlain on regional context.}
@@ -104,7 +107,7 @@ Soil moisture conditions were obtained from the NASA Soil Moisture Active Passiv
 
 Together, SMAP and IMERG provide harmonized, global-scale, open-access satellite observations suitable for characterizing - moisture interactions in regions such as Baton Rouge, where high-frequency precipitation events and strong seasonal cycles affect vadose-zone hydrology.
 
-\section*{Methods}
+\section{Methods}
 
 Rainfall events were defined from daily precipitation \(P_t\). A wet day is \(P_t \geq 1\) mm, and an event is a sequence of wet days that (i) starts after a dry day, and (ii) includes a burst of at least 5 mm on the first or second day. For an event with start \(s\) and end \(e\), total rainfall and duration are  
 
@@ -129,12 +132,12 @@ The main metric is the soil moisture increment
 
 We also compute a nominal lag between antecedent and response times. However, we do not analyze it further because SMAP provides only surface soil moisture (\(\sim\)0--5 cm) at daily resolution. With no information from deeper layers, infiltration timing and true lags cannot be extracted reliably. If multi-depth soil measurements were available, lag analysis would be a valuable extension.  
 
-\section*{Results}
+\section{Results}
 
 \paragraph{Hydroclimatic context.}
-Monthly precipitation and domain‐mean soil moisture (Fig.~\ref{fig:monthly_precip_sm}) track each other closely, with wetter months yielding higher soil moisture. Peaks occur at the end of winter and early spring, reflecting cumulative cool‐season rainfall and low evaporative demand.
+Monthly precipitation and domain-mean soil moisture (Fig.~\ref{fig:monthly_precip_sm}) track each other closely, with wetter months yielding higher soil moisture. Peaks occur at the end of winter and early spring, reflecting cumulative cool-season rainfall and low evaporative demand.
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
   \centering
   \includegraphics[width=1\columnwidth]{monthly_precip_sm}
   \caption{Monthly precipitation totals and averaged soil moisture from 2022-2024.}
@@ -142,9 +145,9 @@ Monthly precipitation and domain‐mean soil moisture (Fig.~\ref{fig:monthly_pre
 \end{figure}
 
 \paragraph{Rainfall events.}
-Event characteristics are shown in Fig.~\ref{fig:rain_events}. The median event produced 25~mm over 2~days. High‐depth, long‐duration outliers (above the 75th percentile in both) occurred mainly in summer. Seasonal counts were Winter~31, Spring~31, Summer~29, and Autumn~23.
+Event characteristics are shown in Fig.~\ref{fig:rain_events}. The median event produced 25~mm over 2~days. High-depth, long-duration outliers (above the 75th percentile in both) occurred mainly in summer. Seasonal counts were Winter~31, Spring~31, Summer~29, and Autumn~23.
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.75\columnwidth]{rain events}
     \caption{Event rainfall depth versus duration.}
@@ -155,14 +158,14 @@ Event characteristics are shown in Fig.~\ref{fig:rain_events}. The median event 
 
 For each event, the soil moisture increment ($\Delta \theta$) was calculated. Fig.~\ref{fig:sample_events} illustrates sample events; smaller storms were sometimes missed by detection rules. Across all events (Fig.~\ref{fig:dt_events}, top), $\Delta \theta$ had a median of ~6\% and a maximum near 18\%. The left panel shows a clear saturation boundary: high antecedent moisture limits responses, while drier soils allow larger increases. Winter and spring cluster near saturation, consistent with Fig.~\ref{fig:monthly_precip_sm}, whereas summer-autumn span drier antecedent states with responses from 0-18\%. The right panel relates $\Delta \theta$ to precipitation: most events (0-50~mm) produced variable responses, indicating rainfall depth alone does not constrain soil moisture change.
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{sample events}
     \caption{Example rainfall event: daily precipitation and soil moisture response.}
     \label{fig:sample_events}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{dt events}
     \caption{Distribution of soil moisture change ($\Delta \theta$) versus antecedent soil moisture and event precipitation.}
@@ -170,7 +173,7 @@ For each event, the soil moisture increment ($\Delta \theta$) was calculated. Fi
 \end{figure}
 
 
-\section*{Future Research}
+\section{Future Research}
 
 Future research could potentially extend this event-based framework by coupling - moisture responses with a fully integrated water-heat-nitrate modeling approach, similar to recent work by \textcite{Fahs2025}. Such coupling would allow assessment of how storm-driven infiltration dynamics influence not only moisture but also temperature effects and nitrate mobilization in the vadose zone, thereby linking observed $\Delta \theta$ signatures to broader water-quality implications under seasonal variability.
 
